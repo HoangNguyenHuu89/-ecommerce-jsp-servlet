@@ -39,8 +39,8 @@ public class SearchControl extends HttpServlet {
         int index = Integer.parseInt(request.getParameter("index"));
         DAO dao = new DAO();
         int count = dao.count(searchName);
-        int endPage = count/3;
-        if(count %  3 !=0) {
+        int endPage = count/4;
+        if(count %  4 !=0) {
            endPage ++;
         }
         List<Product> list = dao.searchProductbyName(searchName, index);

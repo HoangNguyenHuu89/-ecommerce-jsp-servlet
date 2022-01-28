@@ -8,7 +8,7 @@ and open the template in the editor.
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Kết quả tìm kiếm</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,10 +33,10 @@ and open the template in the editor.
         </div>
           
             
-                 <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                 <div class="btn-toolbar test" role="toolbar" aria-label="Toolbar with button groups">
   <div class="btn-group mr-2" role="group" aria-label="First group">
     <c:forEach begin="1" end="${pageEnd}" var="i">
-    <button type="button" class="btn btn-secondary"><a href="search?index=${i}&txt=${txt}" class="${tag==i?"active":""}">${i}</a> </button>
+    <button type="button" class="btn"><a href="search?index=${i}&txt=${txt}" class="${tag==i?"active":""}">${i}</a> </button>
      </c:forEach>
   </div>
 </div>

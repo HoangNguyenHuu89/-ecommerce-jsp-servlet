@@ -35,21 +35,21 @@ public class HomeControl extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-         String indexPage = request.getParameter("index");
-         if(indexPage == null) {
-           indexPage = "1";
-         }
-         int index = Integer.parseInt(indexPage);
-      
-         DAO dao = new DAO();
-    
-         int count = dao.getList();
-              int endPage = count/8;
-              if(count % 8 != 0) {
-                   endPage++;
-               }
+        String indexPage = request.getParameter("index");
+        if (indexPage == null) {
+            indexPage = "1";
+        }
+        int index = Integer.parseInt(indexPage);
+
+        DAO dao = new DAO();
+
+        int count = dao.getList();
+        int endPage = count / 8;
+        if (count % 8 != 0) {
+            endPage++;
+        }
         List<Product> newList = dao.getIndexPage(index);
-        
+
         request.setAttribute("pageEnd", endPage);
         request.setAttribute("listP", newList);
         request.setAttribute("tag", index);

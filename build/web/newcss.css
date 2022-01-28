@@ -1,6 +1,11 @@
 a.active {
     color: red;
-    font-weight: bold;
-    
+    font-weight: bold;   
+}
+div.test {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 

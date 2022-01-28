@@ -17,7 +17,7 @@
             </li>
              <c:if test="${sessionScope.acc.account_role == 1}">
              <li class="nav-item active" style="margin-left: 20px">
-                <a class="nav-link" href="index.jsp">Admin Manager</a>
+                <a class="nav-link" href="manager">Admin Manager</a>
             </li>
            </c:if>
             <c:if test="${sessionScope.acc == null}">
